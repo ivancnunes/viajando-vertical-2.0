@@ -1,0 +1,220 @@
+/* VARIÁVEIS DE COR */
+:root{
+    --cor-principal: violet;
+    --cor-segundaria: orange;
+    --cor-texto1: rgba(255, 255, 255, 0.781);
+    --cor-texto2: rgb(138, 146, 148);
+    --cor-texto-bordas: rgb(0,0,0);
+    --texto-1: "Poppins", sans-serif;
+    --texto-2: "Merriweather", cursive;
+
+}
+
+/* CORPO COMPLETO */
+*{
+    margin: 0;
+    /* margem do site */
+    padding: 0;
+    /* espaçamento */
+    box-sizing: border-box;
+     /* /Faz com que todos os itens do body fiquem dentro da mesma margem/ */
+}
+
+.interface{
+    margin: 0 auto;
+    background-color: var(--cor-principal);
+    padding: 0 3%;
+}
+nav{
+    display: flex;
+    /* deixa o display flexivel para os itens ficarem um do lado do outro */
+    justify-content: space-between;
+    /* atribui um espaçamento entre os itens */
+    align-items: center;
+    /* alinha os itens no centro da tag */
+    font-family: var(--texto-1);
+    font-weight: 400;
+    font-style: normal;
+}
+ul a{
+    font-size: 23px;
+    padding: 15px;
+    text-decoration: none;
+    transition: color 0.3 ease;
+}
+ul a:hover{
+    color: var(--cor-texto-bordas)
+}
+ul li{
+    display: flex;
+    align-items: center;
+    
+}
+
+
+/* SELECTION (CONTEÚDO DO SITE) */
+
+/* TEXTO E TÍTULO */
+.principal{
+    background-color: var(--cor-segundaria);
+    text-align: center;
+    /* alinha itens no centro */
+    padding: 120px 20px;
+    /* da um espaço em cima e nos lados respectivamento */
+    font-family:var(--texto-2);
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.principal h1{
+    font-size: 2.8rem;
+    /* tamanho da fonte */
+    margin-bottom: 1.5rem;
+    /* Espaço abaixo do título */
+    color: var(--cor-texto2);
+}
+
+
+/* CARDS */
+
+
+.Pacotes{
+    padding: 2rem;
+    /* Deixa o texto grande */
+    text-align: center;
+    /* Alinha o texto no centro */
+}
+
+/*TÍTULO DA SEÇÃO  */
+
+.cards-titulo{
+    font-size: 2rem;
+    /* tamanho da fonte */
+    font-weight: bold;
+    /* deixa o título testacado */
+    margin-bottom:1.5rem ;
+    /* espaço em baixo do título */
+    color: var(--cor-texto-bordas)
+}
+/* GRID DOS CARDS */
+.cards-agenda{
+    display: grid;
+    /* transforma os itens em "blocos" */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* cria várias colunas automáticas, com largura mínima de 250px e distribuindo igualmente no espaço disponível */
+    gap: 1.5rem;
+    /* espaço entre os cards */
+    justify-content: center;
+    /* centraliza os cards no centro */
+}
+.cards-titulo{
+    font-family: var(--texto-2);
+}
+/* CADA CARD */
+.card{
+    background-color: #fff;
+    /* cor do fundo */
+    overflow: cover;
+    /* faz com que as imagens não saiam do card */
+    border-radius: 20px;
+    /* arredonda as bordas */
+}
+.card img{ /* chama apenas as imagens da div card */
+    width: 100%;
+    /* faz com que a imagem ocupe 100% do card */
+    height: 250px;
+    /* altura para manter o card uniforme, puxa o tamanho maximo do grid-templaate-columns */
+    object-fit: cover;
+    /* corta a imagem para caber tudo */
+}
+/* CONTEÚDO DO CARS */
+.card-conteudo{
+    padding: 1rem;
+    /* distancia das frases para a imagem */
+    text-align: center;
+    /* Alinhar o texto no centro */
+}
+.card-conteudo h3{/* pega apenas o h3 da tag com div. card-conteudo */
+    font-size: 1.2rem;
+    /* tamanho da fonte, deixa como estivesse em negrito */
+    margin: 0.5rem;
+    /* deixa uma margem maior entre os textos */
+    color: var(--cor-texto-bordas);
+    font-family: var(--texto-1);
+}
+.card-conteudo p{
+    font-size: 0.9rem;
+    /* tamanho do texto de baixo, deixando menor */
+    color: var(--cor-texto2);
+    /* cor do texto menor */
+    font-family: var(--texto-2);
+}
+/* EFEITO HOVER( EFEITO DE SOMBRA) */
+
+.card:hover{ /* Pega apenas o card com imagem, texto e valores */
+    transform: translateY(-5px);
+    /* faz com que o card tenha uma leve elevação quando o mouse passar por cima */
+    box-shadow: 0 8px 20px var(--cor-texto-bordas);
+}
+
+/* RODAPÉ */
+
+.interface-rodape{
+    max-width: 1280px;
+    max-height: 0%;
+    margin: 0 auto;
+/* margin: → define a margem do elemento, 0 auto → significa:
+0 → margem superior e inferior = 0 (sem espaço em cima e embaixo).
+auto → margem esquerda e direita são calculadas automaticamente pelo navegador. */
+}
+footer{
+    background-color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-texto-bordas);
+    padding-bottom: 40px;
+    color: var(--cor-texto1);
+}
+/* logo */
+footer .boxbox-line-footer img{
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+.line-footer{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+        /* rem = root em → é relativo ao tamanho da fonte do elemento raiz (<html>) 
+    1rem = 16px
+    2rem = 32px
+    0.5rem = 8px*/
+}
+.line-footer p{
+    font-size: 1.2rem;
+    margin: 10px 0 20px 0;
+    font-family: var(--texto-1);
+}
+.line-footer h2{
+    font-family: var(--texto-1);
+}
+footer .line-footer{
+    text-align: center;
+    margin-bottom: 10px;
+}
+footer .line-footer1{
+    border-bottom: 2px solid var(--cor-texto-bordas);
+    padding: 10px 0;
+}
+footer .line-footer2{
+    border-bottom: 2px solid var(--cor-texto-bordas);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+footer .line-footer2 .box-line-footer{
+    max-width: calc(100% / 5);
+    /* calculo para deixar os itens do mesmo tamanho */
+}
+footer .line-footer2 .box-line-footer h3{
+    /* pega apenas os itens h3 */
+    color: var(--cor-texto2);
+    margin-bottom: 10px;
+}
